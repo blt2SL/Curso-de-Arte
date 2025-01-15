@@ -1,0 +1,47 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: rgba(0, 123, 255, 0.8); /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave para el color de fondo */
+    margin: 10px; /* Espacio entre botones */
+}
+
+button:hover {
+    background-color: rgba(0, 86, 179, 0.8); /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos para la lista de audiolibros */
+#audiolibros {
+    margin: 20px;
+}
+
+#audiolibros button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#audiolibros button:hover {
+    background-color: #45a049;
+}
+
+.audiolibro-item {
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}

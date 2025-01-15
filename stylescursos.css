@@ -1,0 +1,270 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.button {
+    background-color: rgba(0, 123, 255, 0.8); /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Bordes redondeados para hacer el botón circular */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    margin-top: 10px; /* Espacio superior para separar del contenido */
+    display: flex; /* Usar flexbox para centrar el texto */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    position: relative; /* Asegúrate de que el botón tenga un contexto de posición */
+    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.button:hover {
+    background-color: red; /* Color rojo al pasar el mouse */
+}
+
+a {
+    text-decoration: none; /* Quitar el subrayado del enlace */
+}
+
+.phone-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Separación de 2 cm aproximadamente */
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.phone-container {
+    width: 250px;
+    height: 500px;
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 8px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phone-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.phone-screen {
+    width: 230px;
+    height: 450px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.phone-notch {
+    width: 100px;
+    height: 20px;
+    background-color: #000;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 10;
+}
+
+.phone-camera {
+    width: 10px;
+    height: 10px;
+    background-color: #444;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.phone-screen img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.phone-screen h2 {
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.phone-screen p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.phone-home-button {
+    width: 50px;
+    height: 5px;
+    background-color: #ddd;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+/* Colores únicos para cada celular */
+.phone-container:nth-child(1) { 
+    border-color: #1e88e5; 
+}
+.phone-container:nth-child(2) { 
+    border-color: #d32f2f; 
+}
+.phone-container:nth-child(3) { 
+    border-color: #7cb342; 
+}
+.phone-container:nth-child(4) { 
+    border-color: #8e24aa; 
+}
+.vertical-text {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+font-size: 40px;
+font-weight: bold;
+color: #333;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.vertical-text span {
+margin: 5px 0;
+animation: float 3s ease-in-out infinite alternate;
+}
+
+/* Animación de flotación para los textos */
+@keyframes float {
+0% { transform: translateY(0); }
+100% { transform: translateY(-10px); }
+}
+
+/* Fondo animado */
+.phone-screen {
+position: relative;
+overflow: hidden;
+}
+
+.phone-screen::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(45deg, 
+    rgba(255,0,0,0.1), 
+    rgba(0,255,0,0.1), 
+    rgba(0,0,255,0.1)
+);
+background-size: 400% 400%;
+animation: gradientBG 15s ease infinite;
+z-index: -1;
+}
+
+@keyframes gradientBG {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+/* Efecto de partículas sutiles */
+.phone-screen::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: 
+    radial-gradient(#ffffff 1px, transparent 1px),
+    radial-gradient(#ffffff 1px, transparent 1px);
+background-size: 50px 50px;
+background-position: 0 0, 25px 25px;
+opacity: 0.3;
+animation: moveParticles 10s linear infinite;
+}
+
+.phone-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#colorPalette {
+    display: flex;
+    margin-top: 10px;
+}
+
+.colorBucket {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.background-image {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center;
+opacity: 0.7;
+animation: moveBackground 20s linear infinite alternate;
+z-index: 1;
+}
+
+@keyframes moveBackground {
+0% { 
+    transform: scale(1) rotate(0deg);
+}
+50% { 
+    transform: scale(1.1) rotate(2deg);
+}
+100% { 
+    transform: scale(1.2) rotate(-2deg);
+}
+}
+
+.vertical-text {
+position: relative;
+z-index: 10;
+/* Otros estilos que ya tenías */
+}

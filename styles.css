@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    display: flex; /* Usar flexbox en el body */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.main-card {
+    background-image: url('imagenes/Fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Cubrir todo el área de la tarjeta */
+    background-position: center; /* Centrar la imagen */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%; /* Ancho de la tarjeta general */
+    position: relative; /* Para posicionar el botón */
+    color: white; /* Color del texto en la tarjeta */
+}
+
+.voice-button {
+    position: absolute; /* Posicionar el botón en la parte superior izquierda */
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 123, 255, 0.8); /* Color del botón con transparencia */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.voice-button:hover {
+    background-color: rgba(0, 86, 179, 0.8); /* Color más oscuro al pasar el mouse */
+}
+
+.button {
+    background-color: rgba(0, 123, 255, 0.8); /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    margin-top: 10px; /* Espacio superior para separar del contenido */
+}
+
+.button:hover {
+    background-color: rgba(0, 86, 179, 0.8); /* Color más oscuro al pasar el mouse */
+}
+
+.title {
+    text-align: center; /* Centrar el texto */
+    margin: 20px auto; /* Margen superior e inferior, y centrar horizontalmente */
+    width: auto; /* Ancho automático para que se ajuste al contenido */
+    max-width: 80%; /* Ancho máximo para que no sea demasiado ancho */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Asegurarse de que el texto sea blanco */
+}
+
+.container {
+    display: flex; /* Usar flexbox para alinear las tarjetas */
+    justify-content: center; /* Centrar las tarjetas en el contenedor */
+    flex-wrap: nowrap; /* No permitir que las tarjetas se envuelvan */
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0; /* Eliminar margen para que estén pegadas */
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column; /* Alinear el contenido verticalmente */
+    align-items: center; /* Centrar el contenido horizontalmente */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transición suave para el efecto */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumentar el tamaño de la tarjeta al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Aumentar el sombreado al pasar el mouse */
+}
+
+.blue {
+    background-color: rgba(0, 123, 255, 0.8); /* Color azul con transparencia */
+}
+
+.orange {
+    background-color: rgba(255, 165, 0, 0.8); /* Color naranja con transparencia */
+}
+
+.yellow {
+    background-color: rgba(255, 215, 0, 0.8); /* Color amarillo con transparencia */
+}
+
+.circle {
+    width: 100px; /* Ancho del círculo */
+    height: 100px; /* Alto del círculo */
+    border-radius: 50%; /* Hace que sea circular */
+    overflow: hidden; /* Oculta el desbordamiento */
+    margin: 0 auto 10px; /* Centra el círculo */
+}
+
+.circle img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del círculo */
+    height: 100%; /* Hace que la imagen ocupe todo el alto del círculo */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+}
+
+h2 {
+    color: #fff; /* Cambiar el color del texto a blanco para mejor contraste */
+}

@@ -1,0 +1,92 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+#inicio, #pregunta, #resultado {
+    margin: 20px auto; /* Centrar la tarjeta */
+    padding: 10px; /* Reducir el padding */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ancho de la tarjeta (reducido) */
+    max-width: 400px; /* Ancho máximo de la tarjeta (reducido) */
+    position: relative; /* Para posicionar la imagen de fondo */
+    overflow: hidden; /* Para ocultar el desbordamiento */
+}
+
+/* Imagen de fondo */
+#inicio, #pregunta, #resultado {
+    background-image: url('imagenes/cultura.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Cubrir todo el contenedor */
+    background-position: center; /* Centrar la imagen */
+}
+
+/* Estilos para los botones */
+button {
+    background-color: rgba(0, 123, 255, 0.8); /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave para el color de fondo */
+    margin: 10px; /* Espacio entre botones */
+    position: relative; /* Para posicionar el pseudo-elemento */
+    overflow: hidden; /* Para ocultar el derrame */
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 100%; /* Comienza fuera del botón */
+    left: 50%;
+    width: 150%; /* Ancho del derrame */
+    height: 20px; /* Altura del derrame */
+    background-color: rgba(0, 86, 179, 0.8); /* Color del derrame */
+    border-radius: 50%; /* Bordes redondeados para el derrame */
+    transform: translateX(-50%); /* Centrar el derrame */
+    transition: top 0.3s ease; /* Transición suave para el derrame */
+}
+
+button:hover::before {
+    top: 110%; /* Mover el derrame hacia abajo al pasar el mouse */
+}
+
+button:hover {
+    background-color: rgba(0, 86, 179, 0.8); /* Color más oscuro al pasar el mouse */
+}
+
+#imagen-pregunta img {
+    width: 100%; /* Ajustar el tamaño de la imagen */
+    max-width: 400px; /* Limitar el ancho máximo */
+    height: auto; /* Mantener la proporción */
+}
+
+/* Estilos para la tabla de respuestas */
+.tabla-respuestas {
+    width: 100%;
+    border-collapse: collapse; /* Colapsar bordes */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.tabla-respuestas th, .tabla-respuestas td {
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+    border: 1px solid #ddd; /* Borde de las celdas */
+}
+
+.tabla-respuestas tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+.tabla-respuestas tr:nth-child(odd) {
+    background-color: #ffffff; /* Color de fondo para filas impares */
+}
+
+.tabla-respuestas th {
+    background-color: #4CAF50; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+}

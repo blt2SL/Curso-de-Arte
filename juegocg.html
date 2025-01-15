@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="juegocg.css">
+    <title>Juego de Cultura General - Arte</title>
+</head>
+<body>
+    <div id="inicio">
+        <h1>Juego de Cultura General</h1>
+        <button id="comenzar" class="button">COMENZAR</button>
+    </div>
+    <div id="pregunta" style="display:none;">
+        <h2 id="texto-pregunta"></h2>
+        <div id="imagen-pregunta"></div> <!-- Contenedor para la imagen -->
+        <div id="opciones"></div> <!-- Contenedor para las opciones -->
+    </div>
+    <div id="resultado" style="display:none;">
+        <h2>Puntaje obtenido: <span id="puntaje"></span></h2>
+        <div id="respuestas"></div> <!-- Contenedor para mostrar respuestas -->
+        <button id="reiniciar" class="button">REINICIAR</button>
+        <a href="juegos.html"><button class="button">SALIR</button></a>
+    </div>
+    <audio id="sonido-fondo" src="musica/musica-fondo.mp3" loop></audio>
+    <script src="juego.js"></script>
+</body>
+</html>
